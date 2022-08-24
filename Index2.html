@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css3/bootstrap.min.css">
+
+    <title>Ejercicio 2</title>
+    <style>
+        header {
+            background-color: darkslategray;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.790);
+        }
+        
+        body {
+            background-image: url(Img/fondogris.jpg);
+            background-size: cover;
+        }
+        
+        table {
+            background-color: rgba(238, 228, 186, 0.80);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .formulario {
+            background: rgba(0, 0, 0, 0.25);
+            padding: 2px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.790);
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="text-white">
+
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-3 ">
+                    <a href="principal.html"><img class="opacity-100 mt-2" width="100px" src="img/licor-crema-cafe-brandy-whisky.jpg" alt=""></a>
+                </div>
+                <div class="col-6 text-center d-flex justify-content-center align-items-center text-white mt-3 mb-3 ">
+                    <h1>Examen - Ejercicio2 </h1>
+                </div>
+                <hr>
+                <div class="row mb-2">
+                    <div class="col-4 "></div>
+
+                    <div class="col-2"><a href="index1.html">Ejercicio1</a></div>
+                    <div class="col-2">
+                        <a href="Ejer2"></a>Ejercicio2</div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </header>
+
+    <div class="col-12 container mt-5">
+        <h2 class="text-center">Datos</h2>
+        <div class="formulario row m-1 mb-5">
+            <div class="col">
+
+
+                <form method="post" name="Form1">
+
+                    <div class="row">
+                        <div class="col-6">
+                            <h2 class="mb-5 mt-5 text-center">Personales</h2>
+                            <hr>
+                            <div class="row">
+                                <div class="col-12">
+                                    <label class="form-label col-lg-auto mb-3 mb-lg-2">Ingrese cedula</label>
+                                    <input type="text" class="form-control w-75" name="cedula" id="cedula">
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label col-lg-auto mb-3 mb-lg-2 ">Nombre</label>
+                                    <input type="text" class="form-control w-75" name="nom" id="nom">
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="ape" class="form-label col-lg-auto mb-3 mb-lg-2">Apellido</label>
+                                    <input type="text" class="form-control w-75" name="ape" id="ape">
+                                </div>
+
+                                <div class="col-12 ">
+                                    <div class="row">
+
+                                        <div class="col-6">
+                                            <label class="form-label col-lg-auto mt-4 mb-3 mb-lg-2 ">Sexo</label><br>
+                                            <select name="sex" id="sex" class="w-75">
+
+                                                <option selected value="Masculino">
+                                                    Masculino
+                                                </option>
+                                                <option value="Femenino">
+                                                    Femenino
+                                                </option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label col-lg-auto mt-4 mb-3 mb-lg-2 ">Fecha de nacimiento</label><br>
+                                            <input class="w-75" type="date" name="fecha_nacimiento" id="fecha_nacimiento">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-6">
+                            <h2 class="mb-5 mt-5 text-center">Profesionales</h2>
+                            <hr>
+                            <div class="row">
+
+                                <div class="col-12">
+                                    <label class="form-label col-lg-auto mt-4 mb-3 mb-lg-2 me- w-25">Cargo</label>
+                                    <select name="carg" id="carg" class="w-50">
+                                        <option selected value="Programador">
+                                            Programador
+                                        </option>
+                                        <option value="Asistente">
+                                            Asistente
+                                        </option>
+                                        <option value="Supervisor">
+                                            Supervisor
+                                        </option>
+                                        <option value="Jefe_Grupo">
+                                            Jefe Grupo
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label col-lg-auto mt-4 mb-3 mb-lg-2 me- w-25">Turno</label>
+                                    <select name="turno" id="turno" class="w-50">
+                                        <option selected value="Diurno">
+                                            Diurno
+                                        </option>
+                                        <option value="Nocturno">
+                                            Nocturno
+                                        </option>
+
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <div>
+                                        <h4 class="text-center mt-5">Conocimientos</h4>
+                                        <input type="checkbox" name="de1" id="Programacion" class="me-4"><label>Programacion</label>
+                                        <br>
+                                        <input type="checkbox" name="de2" id="base_de_datos" class="me-4"><label for="">Base de datos</label>
+                                        <br>
+                                        <input type="checkbox" name="de2" id="Mantenimiento" class="me-4"><label for="">Mantenimiento</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <hr class="my-4">
+
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-4"></div>
+                            <div class="col-4">
+                                <button class=" text-center col-5 w-100 btn btn-dark btn-lg mb-4" type="button" onclick="imprimir_sueldo()">Verificar</button>
+                            </div>
+                            <div class="col-4"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+
+
+                    <div class="col-12">
+                        <div class="row my-2">
+                            <div class="col-4 ps-3">
+                                <h5 class="text-center fs-4 mb-3">Categoria</h5>
+                                <img class="ms-5 " id="mostrar_genero" src="" width="100px" height="100px" alt="">
+                            </div>
+                            <div class="col-4 ">
+                                <h5 class="text-center fs-4 mb-3">Categoria</h5>
+                                <input class="w-75" id="categoria1" type="text">
+                            </div>
+                            <div class="col-4 text-center ">
+                                <h6 class="text-center fs-4 mb-3">Sueldo Semanal</h6>
+                                <P class="fs-3"><span id="sueldo_total">sueldo total</span> $</P>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="row border">
+                        <div id="categoria" class="col-4">categoria</div>
+                        <div id="sueldo_total" class="col-4"></div>
+                        <div id="descripcion_cargo" class="col-4"></div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function imprimir_sueldo() {
+
+        //Definir variables
+        var sueldo,
+            cargo_valor,
+            bono_semanal,
+            turno,
+            check_p,
+            check_bd,
+            check_m,
+            genero,
+            hoy,
+            cumpleanos,
+            edad,
+            m;
+
+
+
+
+
+
+
+        //Recibir valores ingresado por el usuario
+        cargo_valor = document.getElementById('carg').value;
+        turno = document.getElementById('turno').value;
+        check_p = document.getElementById('Programacion').checked;
+        check_bd = document.getElementById('base_de_datos').checked;
+        check_m = document.getElementById('Mantenimiento').checked;
+        genero = document.getElementById('sex').value;
+
+        var fecha = document.getElementById('fecha_nacimiento').value;
+        hoy = new Date();
+        cumpleanos = new Date(fecha);
+        edad = hoy.getFullYear() - cumpleanos.getFullYear();
+        m = hoy.getMonth() - cumpleanos.getMonth();
+
+
+
+        //Cargo
+        switch (cargo_valor) {
+            case 'Programador':
+                sueldo = 75;
+                break;
+            case 'Asistente':
+                sueldo = 100;
+                break;
+            case 'Supervisor':
+                sueldo = 200;
+                break;
+            case 'Jefe_Grupo':
+                sueldo = 150;
+                break;
+        }
+
+        //Turno
+        switch (turno) {
+            case 'Diurno':
+                bono_semanal = 75;
+                break;
+            case 'Nocturno':
+                bono_semanal = 50;
+                break;
+        }
+
+        //Genero
+        switch (genero) {
+            case 'Masculino':
+                document.getElementById('mostrar_genero').src = 'img/atleta_h.png';
+                break;
+            case 'Femenino':
+                document.getElementById('mostrar_genero').src = 'img/atleta_f.png';
+                break;
+
+        }
+
+        //Condicion para la categoria
+
+        if (check_p == true) {
+            document.getElementById('categoria1').value = 'Programacion';
+        }
+        if (check_bd == true) {
+            document.getElementById('categoria1').value = 'Base de datos';
+
+        }
+        if (check_m == true) {
+            document.getElementById('categoria1').value = 'Mantenimiento';
+
+        }
+        //primera condicion
+        if ((check_p) && (check_bd)) {
+
+            if ((edad >= 18) && (edad < 26)) {
+                document.getElementById('categoria1').value = 'Junior BD';
+                bono_junior_bd = sueldo * 0.005;
+            } else if ((edad >= 26)) {
+                document.getElementById('categoria1').value = 'Senior BD';
+                bono_junior_bd = sueldo * 0.010;
+            } else {
+                document.getElementById('categoria1').value = 'Menor de edad';
+                bono_junior_bd = 0;
+            }
+        } else {
+            bono_junior_bd = 0;
+        }
+
+        //Segunda condicion        
+        if ((check_p) && (check_m)) {
+
+            if ((edad >= 18) && (edad < 26)) {
+                document.getElementById('categoria1').value = 'Junior Syst';
+                bono_junior_sys = sueldo * 0.003;
+            } else if ((edad >= 26)) {
+                document.getElementById('categoria1').value = 'Senior Syst';
+                bono_junior_sys = sueldo * 0.007;
+            } else {
+                document.getElementById('categoria1').value = 'Menor de edad';
+                bono_junior_sys = 0;
+            }
+        } else {
+            bono_junior_sys = 0;
+
+        }
+
+
+        //Tercera condicion 
+        if ((check_bd) && (check_m)) {
+
+            if ((edad >= 18) && (edad < 26)) {
+                document.getElementById('categoria1').value = 'Junior Plus';
+                bono_junior_plus = sueldo * 0.005;
+            } else if ((edad >= 26)) {
+                document.getElementById('categoria1').value = 'Senior Plus';
+                bono_junior_plus = sueldo * 0.009;
+            } else {
+                document.getElementById('categoria1').value = 'Menor de edad';
+                bono_junior_plus = 0;
+            }
+        } else {
+            bono_junior_plus = 0;
+        }
+
+
+        //Cuarta condicion 
+        if ((check_p) && (check_bd) && (check_m)) {
+
+            if ((edad >= 18) && (edad < 26)) {
+                document.getElementById('categoria1').value = 'Junior Full';
+                bono_junior_full = sueldo * 0.01;
+            } else if ((edad >= 26)) {
+                document.getElementById('categoria1').value = 'Senior Full';
+                bono_junior_full = sueldo * 0.05;
+            } else {
+                document.getElementById('categoria1').value = 'Menor de edad';
+                bono_junior_full = 0;
+            }
+        } else {
+            bono_junior_full = 0;
+        }
+
+
+
+        sueldo_total = sueldo + bono_semanal + bono_junior_bd + bono_junior_sys + bono_junior_plus + bono_junior_full;
+
+
+
+
+
+        document.getElementById('sueldo_total').innerHTML = sueldo_total;
+
+
+
+
+    }
+</script>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css3/bootstrap.min.css">
+    <title>Ejercicio 1</title>
+    <script>
+        var num2 = [];
+        var par = [];
+        var impar = [];
+        var contador_par = 0;
+        var contador_impar = 0;
+        var resultado_mayor_par = 0;
+        var resultado_menor_par = 10000000000000000;
+        var resultado_mayor_impar = 0;
+        var resultado_menor_impar = 10000000000000000;
+        var media_impar;
+        var media_par;
+
+        function ejemplo2() {
+            for (let i = 0; i < 20; i++) {
+                num2.push(parseInt(Math.random() * 50));
+            }
+            document.getElementById("mostrar").value = num2;
+
+        }
+
+        function verificar_par_impar() {
+            var constante = 0;
+            for (let i = 0; i < num2.length; i++) {
+
+                if ((num2[i] % 2) == 0) {
+                    contador_par = contador_par + num2[i];
+                    par.push(num2[i]);
+                    document.getElementById("valor1").value = par;
+
+
+                } else {
+                    contador_impar = contador_impar + num2[i];
+                    impar.push(num2[i]);
+                    document.getElementById("valor2").value = impar;
+
+                }
+
+
+
+            }
+
+            media_par = Math.round(contador_par / par.length);
+            media_impar = Math.round(contador_impar / impar.length);
+
+            document.getElementById("media_par").innerHTML = media_par;
+            document.getElementById("media_impar").innerHTML = media_impar;
+
+            for (let i = 0; i < par.length; i++) {
+                if (par[i] > resultado_mayor_par) {
+
+                    resultado_mayor_par = par[i];
+                    document.getElementById('mayor_par').innerHTML = resultado_mayor_par;
+                }
+
+                if (par[i] < resultado_menor_par) {
+                    resultado_menor_par = par[i];
+                    document.getElementById('menor_par').innerHTML = resultado_menor_par;
+                }
+            }
+
+            for (let i = 0; i < impar.length; i++) {
+                if (impar[i] > resultado_mayor_impar) {
+
+                    resultado_mayor_impar = impar[i];
+                    document.getElementById('mayor_impar').innerHTML = resultado_mayor_impar;
+                }
+
+                if (impar[i] < resultado_menor_impar) {
+                    resultado_menor_impar = impar[i];
+                    document.getElementById('menor_impar').innerHTML = resultado_menor_impar;
+                }
+            }
+            if (resultado_mayor_par > resultado_mayor_impar) {
+
+                document.getElementById('color_mayor').setAttribute("style", "backGround-color: blue;color:white;");
+                document.getElementById('color_mayor').innerHTML = 'El # mayor par es mayor';
+            } else {
+
+                document.getElementById('color_mayor').setAttribute("style", "backGround-color: red;color:white;");
+                document.getElementById('color_mayor').innerHTML = 'El # mayor impar es mayor';
+            }
+
+
+
+            if (media_par > media_impar) {
+
+                document.getElementById('color_media').setAttribute("style", "backGround-color: blue;color:white;");
+                document.getElementById('color_media').innerHTML = 'La media par es mayor';
+            } else {
+
+                document.getElementById('color_media').setAttribute("style", "backGround-color: red;color:white;");
+                document.getElementById('color_media').innerHTML = 'La media impar es mayor';
+            }
+
+
+            if (resultado_menor_par > resultado_menor_impar) {
+
+                document.getElementById('color_menor').setAttribute("style", "backGround-color: blue;color:white;");
+                document.getElementById('color_menor').innerHTML = 'La # menor par es mayor';
+            } else {
+
+                document.getElementById('color_menor').setAttribute("style", "backGround-color: red; color:white;");
+                document.getElementById('color_menor').innerHTML = 'La # menor impar es mayor';
+            }
+
+            var total = contador_impar + contador_par;
+            document.getElementById("total").value = total;
+        }
+    </script>
+    <style>
+        header {
+            background-color: darkslategray;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.790);
+            background: rgba(0, 0, 0, 0.50)
+        }
+        
+        body {
+            background-image: url(Img/fondogris.jpg);
+            background-size: cover;
+        }
+        
+        table {
+            background-color: rgba(238, 228, 186, 0.80);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .formulario {
+            background: rgba(0, 0, 0, 0.10);
+            padding: 2px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.790);
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="text-white">
+
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-3 ">
+                    <a href="principal.html"><img class="opacity-100 ms-0 " width="150px" src="img/Tortas-Chocolate.jpg" alt=""></a>
+                </div>
+                <div class="col-6 text-center d-flex justify-content-center align-items-center text-white mt-3 mb-3 ">
+                    <h1>Examen - Ejercicio 1</h1>
+                </div>
+                <hr>
+                <div class="row mb-2 align-items-center">
+                    <div class="col-4 "></div>
+
+                    <div class="col-2">
+                        <a href="Ejer1"></a>Ejercicio1</div>
+                    <div class="col-2"><a href="Index2.html">Ejercicio2</a></div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </header>
+
+    <div class="col-6 container mt-5">
+
+        <div class="formulario row m-1">
+            <div class="col">
+                <h2 class="mb-5 mt-4"></h2>
+
+                <form>
+                    <div class="row g-4">
+                        <div class="d-flex">
+                            <div class="col-12 ">
+
+                                <input class="form-label col-lg-auto mb-3 mb-lg-2 w-100" type="text" placeholder="Ingrese numeros" id="mostrar">
+                                <input type="button" value="Ejemplo" onclick="ejemplo2()">
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex">
+                            <div class="col">
+                                <label class="form-label col-lg-auto mb-3 mb-lg-2 ">Numeros Pares</label>
+                                <input type="text" class="form-control w-100" name="valor1" id="valor1">
+
+                                <label class="form-label col-lg-auto mb-3 mb-lg-2 me-2">Numeros Impares</label>
+                                <input type="text" class="form-control w-10" name="valor2" id="valor2">
+                            </div>
+                        </div>
+
+                        <div class="d-flex ">
+                            <div class="col">
+
+                                <table class="table mt-4  mb-3 text-darktable table-responsive table-hover table-bordered" id="tabla" name="tabla">
+
+                                    <tbody>
+                                        <tr class="me-3">
+                                            <td class="table-border h-100 w-auto "></td>
+                                            <td>Par</td>
+                                            <td>Impar</td>
+                                            <td>Color</td>
+                                        </tr>
+
+                                        <tr class="me-3">
+                                            <td class="table-border h-100 w-auto">Mayor</td>
+                                            <td id="mayor_par"></td>
+                                            <td id="mayor_impar"></td>
+                                            <td id="color_mayor"></td>
+                                        </tr>
+
+                                        <tr class="me-3">
+                                            <td>Media</td>
+                                            <td id="media_par"></td>
+                                            <td id="media_impar"></td>
+                                            <td id="color_media"></td>
+                                        </tr>
+
+                                        <tr class="me-3">
+                                            <td>Menor</td>
+                                            <td id="menor_par"></td>
+                                            <td id="menor_impar"></td>
+                                            <td id="color_menor"></td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+                        </div>
+
+                        <div class="col justify-content-center">
+                            <h4>Suma Total</h4>
+                            <input type="text" name="total" id="total">
+
+
+                        </div>
+
+                        <hr class="my-4">
+
+                        <button class="col-5 w-100 btn btn-dark btn-lg" type="button" value="Calcular" id="btn1" onclick="verificar_par_impar()">Calcular</button>
+
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
